@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": false,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "structure": {
+      "type": "string"
+    },
+    "vendorCode": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "sale": {
+      "type": "integer",
+      "required": true,
+      "max": 100,
+      "default": 0
+    },
+    "category": {
+      "via": "products",
+      "model": "category"
+    },
+    "sizes": {
+      "via": "products",
+      "collection": "size"
+    },
+    "description": {
+      "type": "text",
+      "default": "Без описания",
+      "required": true
+    },
+    "recommendedAge": {
+      "type": "string",
+      "default": "любой",
+      "required": true
+    },
+    "photos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "new": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

@@ -1,2 +1,3 @@
-# test-project
-test project for git experience
+# Strapi for web store
+* node version 14.0.0
+* БД SQLight
