@@ -15,7 +15,7 @@
     "name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "price": {
       "type": "decimal",
@@ -27,7 +27,7 @@
     "vendorCode": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "sale": {
       "type": "integer",
@@ -67,6 +67,13 @@
       "type": "boolean",
       "default": true,
       "required": true
+    },
+    "color": {
+      "type": "string"
+    },
+    "insulation": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
