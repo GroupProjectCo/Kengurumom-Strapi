@@ -74,6 +74,10 @@
     "insulation": {
       "type": "boolean",
       "default": false
+    },
+    "orders": {
+      "via": "goods",
+      "collection": "orders"
     }
   }
 }
