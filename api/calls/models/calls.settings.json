@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calls",
+  "info": {
+    "name": "Calls"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clientName": {
+      "type": "string"
+    },
+    "clientPhone": {
+      "type": "string"
+    },
+    "message": {
+      "type": "richtext"
+    }
+  }
+}
